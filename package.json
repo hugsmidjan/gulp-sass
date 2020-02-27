@@ -1,6 +1,6 @@
 {
   "name": "@hugsmidjan/gulp-sass",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "sass gulp task",
   "main": "gulp-sass.js",
   "scripts": {
