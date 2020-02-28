@@ -5,9 +5,9 @@ const defaultOpts = {
   name: 'css', // the display name of the generated tasks
   src: 'src/',
   dist: 'pub/',
-  glob: '*.{scss,sass}', // which files to glob up as entry points
-  watchGlob: '*/**/*.{scss,sass}', // additional files to watch for changes
-  sourcemaps: '.',
+  glob: '*.{scss,sass}', // Glob|Array<Glob> – for entry points. Use '!' prefix to ignore
+  watchGlob: '*/**/*.{scss,sass}', // Glob|Array<Glob> – additional files to watch for changes (or '!' ignore).
+  sourcemaps: '.', // boolean or string (relative location)
   sassOptions: null, // https://sass-lang.com/documentation/js-api#options
 };
 
