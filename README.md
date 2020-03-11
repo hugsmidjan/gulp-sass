@@ -24,6 +24,7 @@ const options = {
   watchGlob: '*/**/*.{scss,sass}', // Glob|Array<Glob> – additional files to watch for changes (or '!' ignore).
   sourcemaps: '.', // boolean or string (relative location)
   sassOptions: null, // https://sass-lang.com/documentation/js-api#options
+  minify: true,
 };
 
 // Create the gulp tasks based on the above options.

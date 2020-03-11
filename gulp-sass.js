@@ -9,6 +9,7 @@ const defaultOpts = {
   watchGlob: '*/**/*.{scss,sass}', // Glob|Array<Glob> – additional files to watch for changes (or '!' ignore).
   sourcemaps: '.', // boolean or string (relative location)
   sassOptions: null, // https://sass-lang.com/documentation/js-api#options
+  minify: true,
 };
 
 const sass = require('gulp-sass');
@@ -33,12 +34,16 @@ module.exports = (opts) => {
         }).on('error', sass.logError)
       )
       .pipe(
-        postcss([
-          autoprefixer(),
-          cssnano({
-            preset: ['default', { cssDeclarationSorter: { keepOverrides: true } }],
-          }),
-        ])
+        postcss(
+          opts.minify
+            ? [
+                autoprefixer(),
+                cssnano({
+                  preset: ['default', { cssDeclarationSorter: { keepOverrides: true } }],
+                }),
+              ]
+            : [autoprefixer()]
+        )
       )
       .pipe(gulpReplace(/ -no-merge/g, ''))
       .pipe(dest(opts.dist, { sourcemaps: opts.sourcemaps }));
