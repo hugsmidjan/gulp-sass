@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. Version number will be decided later -->
+
+## 0.1.1
+
+_2019-03-11_
+
 - feat: Allow opting out of minification
 
 ## 0.1.0
