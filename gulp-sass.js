@@ -36,14 +36,7 @@ module.exports = (opts) => {
         postcss([
           autoprefixer(),
           cssnano({
-            preset: [
-              'default',
-              {
-                discardUnused: true,
-                mergeIdents: true,
-                cssDeclarationSorter: { keepOverrides: true },
-              },
-            ],
+            preset: ['default', { cssDeclarationSorter: { keepOverrides: true } }],
           }),
         ])
       )
