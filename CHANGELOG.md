@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. Version number will be decided later -->
+- fix: Turn off cssnano's `cssDeclarationSorter` to aid minification of mixins
 
 ## 0.1.1
 
