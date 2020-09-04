@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. Version number will be decided later -->
+- fix: List `sass` as peer dependency
 
 ## 0.1.2
 
