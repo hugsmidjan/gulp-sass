@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. Version number will be decided later -->
+- feat: Upgrade dependencies for modern node support
 
 ## 0.1.3
 

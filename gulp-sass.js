@@ -12,12 +12,10 @@ const defaultOpts = {
   minify: true,
 };
 
-const sass = require('gulp-sass');
-sass.compiler = require('sass');
+const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
-const Fiber = require('fibers');
 
 module.exports = (opts) => {
   opts = normalizeOpts(opts, defaultOpts);
@@ -28,10 +26,7 @@ module.exports = (opts) => {
       base: opts.src,
     })
       .pipe(
-        sass({
-          ...opts.sassOptions,
-          fiber: Fiber,
-        }).on('error', sass.logError)
+        sass.sync(opts.sassOptions).on('error', sass.logError)
       )
       .pipe(
         postcss(
